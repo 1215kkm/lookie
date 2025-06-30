@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+@import url(common/reset.css);
+@import url(common/font.css);
+
+html {font-size: 10px;}
+body {font-size: 1.6rem; color: var(--txt_gray2);}
+::placeholder {color: var(--txt_gray1);}
+:focus::placeholder {color: var(--txt_gray3);}
+
+body {
+    --mainC1 : #B7092F;
+    --mainC1_o : #9b0223;
+    --mainC2 : #065B6B;
+
+    --bdC1 : #9cbcc3;
+    --bdC1_o : #689aa4;
+
+    --txt_gray1:#aaa;
+    --txt_gray1_o:#959595;
+    --txt_gray2:#323232;
+    --txt_gray3:#ccc;
+
+    --white : #fff;
+    --bgLight1 : #f0f0f0;
+    --black : #000;
+    --bgDark1 : #151515;
+}
+
+
+.centerbox {max-width: 1800px; margin: 0 auto;}
+.btn1 {background: var(--bgDark1); color: var(--white); padding: 1em 2.5em; border-radius: 50px;}
+.btnC1 {background: var(--mainC1); }
+.btnC1:hover {background: var(--mainC1_o); }
+
+header {margin-top: 10px; font-family: 'Paperlogy-5Medium';}
+header .topmenu {margin-bottom: 1rem;}
+header .topmenu .login_box {display: flex; justify-content: flex-end; gap: 2rem; padding-right: 10px;}
+header .topmenu .login_after {display: none;}
+
+header .topmenu a {opacity: 0.7; display: flex; gap: 5px; align-items: center;}
+header .topmenu a:hover {opacity: 1; text-decoration: underline; text-underline-position:under}
+header .topmenu a img {width: 30px;}
+
+header .topset {display: flex; justify-content: space-between; align-items: center;}
+header .topset h1 {}
+
+header .topset nav {display: flex;}
+header .topset nav .gnb {display: flex; font-family: 'Paperlogy-6SemiBold';}
+header .topset nav .gnb > li {font-size: 1.9rem; display: flex; position: relative; }
+header .topset nav .gnb > li > a {display: flex; align-items: center; padding: 0 3vw;}
+header .topset nav .gnb > li:hover > a {color: var(--mainC2);}
+
+header .topset nav .gnb .lnb {position: absolute; width: 100%; top: 100%; display: none;}
+header .topset nav .gnb > li:hover .lnb {display: block;}
+
+header .topset nav .gnb .lnb li {text-align: center; font-size: 1.7rem; font-family: 'Paperlogy-5Medium'; border-radius: 6px;}
+header .topset nav .gnb .lnb li a {display: block; padding: 1.5rem 0; }
+header .topset nav .gnb .lnb li:hover {background: var(--mainC2);}
+header .topset nav .gnb .lnb li:hover a {color: #fff;}
+
+header .topset .search_box {position: relative;}
+
+header .topset .search_box input {font-size: 1.8rem; padding: 1em 3em 1em 1em; background: none; outline: 1px solid var(--txt_gray1); border-radius: 50px; }
+/* header .topset .search_box:hover input {border: 1px solid var(--bdC1_o);} */
+
+header .topset .search_box input:focus {outline: 2px solid #000;}
+
+header .topset .search_box button {position: absolute; right: 5px; top: 9px;}
+header .topset .search_box button svg {fill: var(--txt_gray1_o);}
+header .topset .search_box button.on svg {fill: var(--black);}
+
+header .topset .btn_box {display: flex; align-items: center; margin-left: 5rem; font-size: 1.8rem;}
+header .topset .btn_box .btn_port {}
+
+
+
+
+
+footer {display: flex; border-top: 1px solid var(--txt_gray3); padding: 5rem; display: flex; justify-content: center; color: var(--txt_gray2);}
+
+
+
+
+
+/* subpage */
+#subpage {min-height: 70vh; border-top: 1px solid #eee;}
+#subpage h2.sub_title {text-align: center; margin: 10rem 0 5rem 0; font-size: 3.6rem;}
+#subpage .content_box {border: 1px solid #eee;}
