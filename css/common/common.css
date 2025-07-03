@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
-@import url(common/reset.css);
-@import url(common/font.css);
+@import url(reset.css);
+@import url(font.css);
 
 html {font-size: 10px;}
 body {font-size: 1.6rem; color: var(--txt_gray2);}
@@ -15,7 +15,8 @@ body {
 
     --bdC1 : #9cbcc3;
     --bdC1_o : #689aa4;
-
+    --bdC1 : #d1d1d1;
+    
     --txt_gray1:#aaa;
     --txt_gray1_o:#959595;
     --txt_gray2:#323232;
@@ -38,8 +39,13 @@ header .topmenu {margin-bottom: 1rem;}
 header .topmenu .login_box {display: flex; justify-content: flex-end; gap: 2rem; padding-right: 10px;}
 header .topmenu .login_after {display: none;}
 
-header .topmenu a {opacity: 0.7; display: flex; gap: 5px; align-items: center;}
-header .topmenu a:hover {opacity: 1; text-decoration: underline; text-underline-position:under}
+.derbox a {opacity: 0.7; display: flex; gap: 5px; align-items: center;}
+.derbox a:hover {opacity: 1; text-decoration: underline; text-underline-position:under}
+
+a.der {opacity: 0.7; display: flex; gap: 5px; align-items: center;}
+a.der:hover {opacity: 1; text-decoration: underline; text-underline-position:under}
+
+
 header .topmenu a img {width: 30px;}
 
 header .topset {display: flex; justify-content: space-between; align-items: center;}

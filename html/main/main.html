@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>루키스팟 로그인</title>
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/common/common.css">
+    <link rel="stylesheet" href="../../css/member.css">
 </head>
 <body id="login_page">
     <header>
         <div class="centerbox">
             <div class="topmenu">
-                <div class="login_box login_before">
+                <div class="login_box login_before derbox">
                     <a href="#"><img src="../../images/common/icon_login.svg" alt="로그인" title="로그인">로그인</a>
                     <a href="#"><img src="../../images/common/icon_join.svg" alt="회원가입" title="회원가입">회원가입</a>
                     <a href="#"><img src="../../images/common/icon_bell.svg" alt="알림" title="알림">알림</a>
                     <a href="#"><img src="../../images/common/icon_test.svg" alt="문제풀이" title="문제풀이">문제풀이</a>
                 </div>
-                <div class="login_box login_after">
+                <div class="login_box login_after derbox">
                     <a href="#"><img src="../../images/common/icon_login.svg" alt="로그아웃" title="로그아웃">로그아웃</a>
                     <a href="#"><img src="../../images/common/icon_join.svg" alt="마이페이지" title="마이페이지">마이페이지</a>
                     <a href="#"><img src="../../images/common/icon_bell.svg" alt="알림" title="알림">알림</a>
@@ -69,8 +70,53 @@
     <section id="subpage" class="login_wrap">
         <div class="centerbox">
             <h2 class="sub_title">로그인</h2>
-    
-            <div class="content_box"></div>
+            <div class="content_box">
+                <div class="banner">
+
+                </div>
+                <fieldset>
+                    <legend>로그인</legend>
+                    <form action="" method="">
+                        <div class="top">
+                            <div class="input_box">
+                                <div><input type="text" class="id"></div>
+                                <div><input type="password" class="pw" maxlength="20">
+                                    <span class="eyes">
+                                        <i class="on"><img src="../../images/common/icon_eye_on.svg" alt=""></i>
+                                        <i class="off"><img src="../../images/common/icon_eye_off.svg" alt=""></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <button>로그인</button>
+                        </div>
+
+                        <div class="login_maintain">
+                            <label for="maintain">
+                                <input type="checkbox" id="maintain">
+                                <span class="checkAni"><img src="../../images/common/icon_check.svg" alt="check_icon"></span>
+                                로그인유지
+                            </label>
+                            <label for="idsave">
+                                <input type="checkbox" id="idsave">
+                                <span class="checkAni"><img src="../../images/common/icon_check.svg" alt="check_icon"></span>
+                                아이디저장
+                            </label>
+                        </div>
+
+                        <div class="social_login">
+                            <a href="#" title="회원가입" class="userjoin"><img src="../../images/common/icon_arrow1.svg" alt="">회원가입</a>
+                            <a href="#" title="네이버" class="naver"><img src="../../images/common/icon_naver.svg" alt="네이버"></a>
+                            <a href="#" title="카카오" class="kakao"><img src="../../images/common/icon_kakao.svg" alt="카카오"></a>
+                            <a href="#" title="구글" class="google"><img src="../../images/common/icon_google.svg" alt="구글"></a>
+                        </div>
+
+                        <div class="find_info derbox">
+                            <a href="#"><img src="../../images/common/icon_arrow1.svg" alt="">아이디 찾기</a>
+                            <a href="#"><img src="../../images/common/icon_arrow1.svg" alt="">비밀번호 찾기</a>
+                        </div>
+                    </form>
+                </fieldset>
+            </div>
         </div>
     </section>
 

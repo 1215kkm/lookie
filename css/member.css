@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+body {
+    --mainC1 : #B7092F;
+    --mainC1_o : #9b0223;
+    --mainC2 : #065B6B;
+    --mainC2_o : #067187;
+
+    --bdC1 : #9cbcc3;
+    --bdC1_o : #689aa4;
+    --bdC2 : #d1d1d1;
+    
+    --txt_gray1:#aaa;
+    --txt_gray1_o:#959595;
+    --txt_gray2:#323232;
+    --txt_gray3:#ccc;
+    --txt_gray4:#888;
+
+    --white : #fff;
+    --bgLight1 : #f0f0f0;
+    --black : #000;
+    --bgDark1 : #151515;
+}
+
+
+.login_wrap {}
+
+#subpage.login_wrap .content_box{display: flex;width: 50%; margin: 0 auto; gap: 5rem;padding: 5rem;border-radius: 2rem;min-width: 800px}
+.login_wrap .content_box .banner{width: 45%; background: #eee;}
+.login_wrap fieldset {flex-grow: 1;}
+
+.login_wrap form{display: flex; flex-direction: column; gap: 10px;}
+
+.login_wrap form .top{display: flex;gap: 10px;}
+.login_wrap form .top .input_box{display: flex;flex-direction: column;gap: 14px;width: 100%;position: relative;}
+.login_wrap form .top .input_box > div {display: flex;position: relative;}
+.login_wrap form .top .input_box input{border: 1px solid var(--bdC2);height: 5rem;border-radius: 7px; padding: 0 10px 0 35px;font-size: 1.7rem;flex-grow: 1;}
+.login_wrap form .top .input_box input.id {background: url(../images/common/icon_id.svg)no-repeat 5px center;}
+.login_wrap form .top .input_box input.pw {background: url(../images/common/icon_pw.svg)no-repeat 5px center;}
+
+.login_wrap form .top .input_box .eyes {position: absolute;height: 100%;display: flex;justify-content: center;align-items: center;right: 0;width: 5rem;cursor: pointer;}
+.login_wrap form .top .input_box .eyes .on {}
+.login_wrap form .top .input_box .eyes .off {display: none;}
+
+.login_wrap form .top button{width: 160px;background: var(--mainC2); font-size: 1.8rem;border-radius: 7px;color: var(--white);}
+.login_wrap form .top button:hover {background: var(--mainC2_o);}
+
+.login_wrap form .login_maintain {display: flex; gap: 20px; font-size: 1.6rem;color: var(--txt_gray4);}
+.login_wrap form .login_maintain > label{display: flex;align-items: center;gap: 5px;user-select: none;}
+.login_wrap form .login_maintain > label input[type=checkbox]{display: none;}
+.login_wrap form .login_maintain > label .checkAni{width: 20px;height: 20px;border: 1px solid var(--bdC2); display: inline-flex;align-items: center;justify-content: center;}
+.login_wrap form .login_maintain > label .checkAni img{display: none;}
+.login_wrap form .login_maintain > label input[type=checkbox]:checked ~ .checkAni img {display: block;}
+
+.login_wrap form .login_maintain input{}
+
+.login_wrap form .social_login{display: flex;gap: 15px;}
+.login_wrap form .social_login a{width: 55px;height: 50px;background: #000;color: var(--white);border-radius: 5px;display: flex;align-items: center;justify-content: center;}
+.login_wrap form .social_login a img {max-width: 30px;}
+.login_wrap form .social_login a.userjoin {width: 125px;position: relative; margin-right: 5rem;}
+.login_wrap form .social_login a.userjoin::before {content: "";position: absolute;width: 1px;height: 30px;background: #ddd;right: -30px;}
+.login_wrap form .social_login a.naver {background: #26A258;}
+.login_wrap form .social_login a.kakao {background: #ffca4d;}
+.login_wrap form .social_login a.google {background: #ececec;}
+
+.login_wrap form .find_info{display: flex;gap: 10px;}
+.login_wrap form .find_info a{display: flex;align-items: center;justify-content: center;color: var(--txt_gray4);}
