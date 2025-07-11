@@ -45,16 +45,16 @@ body {
 .login_wrap form .top button{width: 160px;background: var(--mainC2); font-size: 1.8rem;border-radius: 7px;color: var(--white);}
 .login_wrap form .top button:hover {background: var(--mainC2_o);}
 
-.login_wrap form .login_maintain {display: flex; gap: 20px; font-size: 1.6rem;color: var(--txt_gray4);}
+.login_wrap form .login_maintain {display: flex; gap: 20px; font-size: 1.4rem;color: var(--txt_gray4);}
 .login_wrap form .login_maintain > label{display: flex;align-items: center;gap: 5px;user-select: none;}
 .login_wrap form .login_maintain > label input[type=checkbox]{display: none;}
-.login_wrap form .login_maintain > label .checkAni{width: 20px;height: 20px;border: 1px solid var(--bdC2); display: inline-flex;align-items: center;justify-content: center;}
+.login_wrap form .login_maintain > label .checkAni{width: 16px;height: 16px;border: 1px solid var(--bdC2); display: inline-flex;align-items: center;justify-content: center;}
 .login_wrap form .login_maintain > label .checkAni img{display: none;}
 .login_wrap form .login_maintain > label input[type=checkbox]:checked ~ .checkAni img {display: block;}
 
 .login_wrap form .login_maintain input{}
 
-.login_wrap form .social_login{display: flex;gap: 15px;}
+.login_wrap form .social_login{display: flex;gap: 15px; padding: 10px 0}
 .login_wrap form .social_login a{width: 55px;height: 50px;background: #000;color: var(--white);border-radius: 5px;display: flex;align-items: center;justify-content: center;}
 .login_wrap form .social_login a img {max-width: 30px;}
 .login_wrap form .social_login a.userjoin {width: 125px;position: relative; margin-right: 5rem;}

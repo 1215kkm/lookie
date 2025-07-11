@@ -76,18 +76,18 @@
                 </div>
                 <fieldset>
                     <legend>로그인</legend>
-                    <form action="" method="">
+                    <form action="" method="" class="login_form">
                         <div class="top">
                             <div class="input_box">
-                                <div><input type="text" class="id"></div>
-                                <div><input type="password" class="pw" maxlength="20">
+                                <div><input type="text" class="id" placeholder="아이디"></div>
+                                <div><input type="password" class="pw" maxlength="20" placeholder="비밀번호">
                                     <span class="eyes">
                                         <i class="on"><img src="../../images/common/icon_eye_on.svg" alt=""></i>
                                         <i class="off"><img src="../../images/common/icon_eye_off.svg" alt=""></i>
                                     </span>
                                 </div>
                             </div>
-                            <button>로그인</button>
+                            <button class="login-button">로그인</button>
                         </div>
 
                         <div class="login_maintain">
@@ -128,7 +128,7 @@
     <script>
     const input = document.querySelector('header .topset .search_box input');
     const button = document.querySelector('header .topset .search_box button');
-
+        
     // 값 체크 함수
     function checkInput() {
         if (input.value.trim() !== "") { //trim() 문자열 앞뒤의 공백(띄어쓰기, 탭, 줄바꿈 등)을 제거하는 함수
@@ -143,6 +143,53 @@
     input.addEventListener('blur', () => {
         button.classList.remove('on');
     });
+
+    //비밀번호 보이기
+    const pwInput = document.querySelector('.pw')
+    const eyes = document.querySelector('.eyes')
+    const eyesOn = document.querySelector('.eyes > .on')
+    const eyesOff = document.querySelector('.eyes > .off')
+
+
+
+
+    eyes.addEventListener('click', function(){
+        if(pwInput.type === "password"){
+            
+            pwInput.type = "text";
+
+            eyesOn.style.display = 'none'
+            eyesOff.style.display = 'block'
+        } else {
+            pwInput.type = "password";
+            eyesOn.style.display = 'block'
+            eyesOff.style.display = 'none'
+        
+        }
+    })
+
+
+    //로그인 엔터 입력 값 없을때 나오는 경고창
+    const loginButton = document.querySelector('.login-button');
+    const idInput = document.querySelector('.id');
+    const loginForm = document.querySelector('.login_form');
+
+    loginForm.addEventListener('submit',function(event){
+        event.preventDefault();
+
+        if(idInput.value.trim() === ""){
+            alert('아이디를입력 해주세요')
+            return
+        }
+        if (pwInput.value.trim() === ""){
+            alert('비밀번호를입력 해주세요')
+            return
+        }
+
+        alert(`로그인 성공\n아이디: ${idInput.value}`);
+    })
+    
+    console.log(loginForm)
 
     </script>
 </body>
