@@ -28,16 +28,18 @@ body {
     --bgDark1 : #151515;
 }
 
-
-.centerbox {max-width: 1800px; margin: 0 auto;}
+.pc {display: block;}
+.mo {display: none}
+.centerbox {max-width: 1800px; margin: 0 auto; padding: 0 30px;}
 .btn1 {background: var(--bgDark1); color: var(--white); padding: 1em 2.5em; border-radius: 50px;}
 .btnC1 {background: var(--mainC1); }
 .btnC1:hover {background: var(--mainC1_o); }
 
 header {margin-top: 10px; font-family: 'Paperlogy-5Medium';}
 header .topmenu {margin-bottom: 1rem;}
-header .topmenu .login_box {display: flex; justify-content: flex-end; gap: 2rem; padding-right: 10px;}
-header .topmenu .login_after {display: none;}
+header .topmenu .login_wrap {padding-right: 10px;}
+header .topmenu .login_wrap .login_box {display: flex; justify-content: flex-end; gap: 2rem; }
+header .topmenu .login_wrap .login_after {display: none;}
 
 .derbox a {opacity: 0.7; display: flex; gap: 5px; align-items: center;}
 .derbox a:hover {opacity: 1; text-decoration: underline; text-underline-position:under}
@@ -47,8 +49,9 @@ a.der:hover {opacity: 1; text-decoration: underline; text-underline-position:und
 
 header .topmenu a img {width: 30px;}
 
-header .topset {display: flex; justify-content: space-between; align-items: center;}
+header .topset {display: flex; justify-content: space-between; align-items: center; height: 90px;}
 header .topset h1 {}
+header .topset h1 img {width: 100%;}
 
 header .topset nav {display: flex;}
 header .topset nav .gnb {display: flex; font-family: 'Paperlogy-6SemiBold';}
@@ -64,7 +67,7 @@ header .topset nav .gnb .lnb li a {display: block; padding: 1.5rem 0; }
 header .topset nav .gnb .lnb li:hover {background: var(--mainC2);}
 header .topset nav .gnb .lnb li:hover a {color: #fff;}
 
-header .topset .search_box {position: relative;}
+header .topset .search_box {position: relative; }
 
 header .topset .search_box input {font-size: 1.8rem; padding: 1em 3em 1em 1em; background: none; outline: 1px solid var(--txt_gray1); border-radius: 50px; }
 /* header .topset .search_box:hover input {border: 1px solid var(--bdC1_o);} */
@@ -92,3 +95,45 @@ footer {display: flex; border-top: 1px solid var(--txt_gray3); padding: 5rem; di
 #subpage {min-height: 70vh; border-top: 1px solid #eee;}
 #subpage h2.sub_title {text-align: center; margin: 10rem 0 5rem 0; font-size: 3.6rem;}
 #subpage .content_box {border: 1px solid #eee;}
+
+
+@media screen and (max-width:1440px) {    
+    header .topset {justify-content: center;}
+    header .topset h1 {position: absolute; top: 0; width: 120px;}
+    header .topset nav {}
+    header .topset nav .gnb {margin-right: 3vw;}
+    header .topset nav .gnb li a {padding: 0 2vw;}
+    header .topset .search_box {display: flex;align-items: center;}
+    header .topset .search_box input { padding: 0.8em 3em 0.8em 1em; width: 170px; }
+}
+
+@media screen and (max-width:1080px) {
+    .pc {display: none;}
+    .mo {display: block}
+    header .topset {margin-top: 40px;}
+    header .topset .btn_box .btn1 {position: absolute; right: 30px; top: 4px; padding: 0.7em 2em;}
+    header .topmenu {position: absolute; left: 0px; top: 4px; padding: 0.7em 2em;}
+    header .topmenu .hamburger {position: absolute; width: 30px; height: 30px; }
+    header .topmenu .hamburger span {position: absolute; width: 90%; height: 1px; background: #000; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+    header .topmenu .hamburger span::before,
+    header .topmenu .hamburger span::after {content: ""; position: absolute; width: 100%; height: 100%; background: inherit; left: 0; top: -8px;;}
+    header .topmenu .hamburger span::after {top: 8px;}
+
+    header .topmenu .login_wrap  {display: none;}
+    header .topmenu .login_wrap .login_box {position: absolute; min-width: 250px; border:1px solid #000; height: 400px; top: 50px; background: #fff; z-index: 7; justify-content:  center; padding: 20px; align-items: start;}
+    header .topmenu .login_wrap .login_box a {flex-direction: column;  }
+}
+@media screen and (max-width:840px) {
+    .centerbox {padding: 0 15px;}
+    header {}
+    header .topmenu .hamburger {left: 15px;}
+    header .topset nav {flex-direction: column; margin-top: 30px; }
+    header .topset nav .gnb {order: 2; height: 30px; }
+    header .topset nav .gnb li a {padding: 4vw 2vw;}
+    header .topset nav .search_box {order: 1; }
+    header .topset nav .search_box input {padding: 0.6em 3em 0.6em 1em; width: 100%;}
+    header .topset .search_box button {top: 0;}
+    header .topset .btn_box .btn1 {right: 15px;padding: 0.5em 1em;}
+    
+
+}
