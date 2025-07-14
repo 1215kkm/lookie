@@ -49,14 +49,14 @@ a.der:hover {opacity: 1; text-decoration: underline; text-underline-position:und
 
 header .topmenu a img {width: 30px;}
 
-header .topset {display: flex; justify-content: space-between; align-items: center; height: 90px;}
+header .topset {display: flex; justify-content: space-between; align-items: center; }
 header .topset h1 {}
 header .topset h1 img {width: 100%;}
 
 header .topset nav {display: flex;}
-header .topset nav .gnb {display: flex; font-family: 'Paperlogy-6SemiBold';}
+header .topset nav .gnb {display: flex; font-family: 'Paperlogy-6SemiBold'; margin-right: 40px;}
 header .topset nav .gnb > li {font-size: 1.9rem; display: flex; position: relative; }
-header .topset nav .gnb > li > a {display: flex; align-items: center; padding: 0 3vw;}
+header .topset nav .gnb > li > a {display: flex; align-items: center; padding: 0 2.5vw; }
 header .topset nav .gnb > li:hover > a {color: var(--mainC2);}
 
 header .topset nav .gnb .lnb {position: absolute; width: 100%; top: 100%; display: none;}
@@ -74,7 +74,7 @@ header .topset .search_box input {font-size: 1.8rem; padding: 1em 3em 1em 1em; b
 
 header .topset .search_box input:focus {outline: 2px solid #000;}
 
-header .topset .search_box button {position: absolute; right: 5px; top: 9px;}
+header .topset .search_box button {position: absolute; right: 5px; height: 100%;}
 header .topset .search_box button svg {fill: var(--txt_gray1_o);}
 header .topset .search_box button.on svg {fill: var(--black);}
 
@@ -100,18 +100,21 @@ footer {display: flex; border-top: 1px solid var(--txt_gray3); padding: 5rem; di
 @media screen and (max-width:1440px) {    
     header .topset {justify-content: center;}
     header .topset h1 {position: absolute; top: 0; width: 120px;}
-    header .topset nav {}
+    header .topset nav .btn_box {}
+    header .topset nav .btn_box .btn1 {padding: 0.7em 2em;}
     header .topset nav .gnb {margin-right: 3vw;}
-    header .topset nav .gnb li a {padding: 0 2vw;}
+    header .topset nav .gnb li a {padding: 2vw 2vw;}
+    header .topset nav .btn_box {}
     header .topset .search_box {display: flex;align-items: center;}
-    header .topset .search_box input { padding: 0.8em 3em 0.8em 1em; width: 170px; }
+    header .topset .search_box input { padding: 0.5em 3em 0.8em 1em; width: 170px; }
 }
 
-@media screen and (max-width:1080px) {
+@media screen and (max-width:1100px) {
     .pc {display: none;}
     .mo {display: block}
-    header .topset {margin-top: 40px;}
-    header .topset .btn_box .btn1 {position: absolute; right: 30px; top: 4px; padding: 0.7em 2em;}
+    header .topset {margin-top: 50px;}
+    header .topset nav .btn_box  {position: absolute; right: 30px; top: 7px; /* padding: 0.7em 2em; */}
+    header .topset .search_box button {}
     header .topmenu {position: absolute; left: 0px; top: 4px; padding: 0.7em 2em;}
     header .topmenu .hamburger {position: absolute; width: 30px; height: 30px; }
     header .topmenu .hamburger span {position: absolute; width: 90%; height: 1px; background: #000; top: 50%; left: 50%; transform: translate(-50%,-50%);}
@@ -121,14 +124,15 @@ footer {display: flex; border-top: 1px solid var(--txt_gray3); padding: 5rem; di
 
     header .topmenu .login_wrap  {display: none;}
     header .topmenu .login_wrap .login_box {position: absolute; min-width: 250px; border:1px solid #000; height: 400px; top: 50px; background: #fff; z-index: 7; justify-content:  center; padding: 20px; align-items: start;}
-    header .topmenu .login_wrap .login_box a {flex-direction: column;  }
+    header .topmenu .login_wrap .login_box a {flex-direction: column;}
 }
 @media screen and (max-width:840px) {
     .centerbox {padding: 0 15px;}
     header {}
     header .topmenu .hamburger {left: 15px;}
     header .topset nav {flex-direction: column; margin-top: 30px; }
-    header .topset nav .gnb {order: 2; height: 30px; }
+    header .topset nav .gnb {order: 2; height: auto; }
+    header .topset nav .gnb > li {font-size: 1.8rem;}
     header .topset nav .gnb li a {padding: 4vw 2vw;}
     header .topset nav .search_box {order: 1; }
     header .topset nav .search_box input {padding: 0.6em 3em 0.6em 1em; width: 100%;}

@@ -78,57 +78,54 @@
     <section id="subpage" class="login_wrap">
         <div class="centerbox">
             <h2 class="sub_title">로그인</h2>
+            <div class="content_container">
+                <div class="content_box">
+                    <div class="banner">
     
-            <div class="content_box">
-                <div class="banner_box"></div>
-
-                
-                <fieldset>
-                    <legend>로그인</legend>
-                    <form action="" method="">
-                        <div class="top">
-                            <div class="input_box">
-                                <div><input type="text" class="id"></div>
-                                <div><input type="password" class="pw"  maxlength="20">
-                                    <span class="eyes">
-                                        <i class="eye_on"><img src="../../images/member/icon_eye_on.svg" alt=""></i>
-                                        <i class="eye_off"><img src="../../images/member/icon_eye_off.svg" alt=""></i>
-                                    </span>
+                    </div>
+                    <fieldset>
+                        <legend>로그인</legend>
+                        <form action="" method="" class="login_form">
+                            <div class="top">
+                                <div class="input_box">
+                                    <div><input type="text" class="id" placeholder="아이디"></div>
+                                    <div><input type="password" class="pw" maxlength="20" placeholder="비밀번호">
+                                        <span class="eyes">
+                                            <i class="on"><img src="../../images/common/icon_eye_on.svg" alt=""></i>
+                                            <i class="off"><img src="../../images/common/icon_eye_off.svg" alt=""></i>
+                                        </span>
+                                    </div>
                                 </div>
+                                <button class="login-button">로그인</button>
                             </div>
-                            <button>로그인</button>
-                        </div>
-
-                        <div class="login_maintain">
-                            <label for="maintain">
-                                <input type="checkbox" id="maintain">
-                                <span class="checkAni">
-                                    <img src="../../images/member/icon_check.svg" alt="">
-                                </span>
-                                로그인유지
-                            </label>
-                            <label for="idsave">
-                                <input type="checkbox" id="idsave">
-                                <span class="checkAni">
-                                    <img src="../../images/member/icon_check.svg" alt="">
-                                </span>
-                                아이디저장
-                            </label>
-                        </div>
-
-                        <div class="social_login">
-                            <a href="#" title="회원가입" class="userjoin"><img src="../../images/member/icon_arrow1.svg" alt=""> 회원가입</a>
-                            <a href="#" title="네이버" class="naver"><img src="../../images/member/icon_naver.svg" alt=""></a>
-                            <a href="#" title="카카오" class="kakao"><img src="../../images/member/icon_kakao.svg" alt=""></a>
-                            <a href="#" title="구글" class="google"><img src="../../images/member/icon_google.svg" alt=""></a>
-                        </div>
-
-                        <div class="find_info derbox">
-                            <a href="#"><img src="../../images/member/icon_arrow1.svg" alt=""> 아이디 찾기</a>
-                            <a href="#"><img src="../../images/member/icon_arrow1.svg" alt=""> 비밀번호 찾기</a>
-                        </div>
-                    </form>
-                </fieldset>
+    
+                            <div class="login_maintain">
+                                <label for="maintain">
+                                    <input type="checkbox" id="maintain">
+                                    <span class="checkAni"><img src="../../images/common/icon_check.svg" alt="check_icon"></span>
+                                    로그인유지
+                                </label>
+                                <label for="idsave">
+                                    <input type="checkbox" id="idsave">
+                                    <span class="checkAni"><img src="../../images/common/icon_check.svg" alt="check_icon"></span>
+                                    아이디저장
+                                </label>
+                            </div>
+    
+                            <div class="social_login">
+                                <a href="#" title="회원가입" class="userjoin"><img src="../../images/common/icon_arrow1.svg" alt="">회원가입</a>
+                                <a href="#" title="네이버" class="naver"><img src="../../images/common/icon_naver.svg" alt="네이버"></a>
+                                <a href="#" title="카카오" class="kakao"><img src="../../images/common/icon_kakao.svg" alt="카카오"></a>
+                                <a href="#" title="구글" class="google"><img src="../../images/common/icon_google.svg" alt="구글"></a>
+                            </div>
+    
+                            <div class="find_info derbox">
+                                <a href="#"><img src="../../images/common/icon_arrow1.svg" alt="">아이디 찾기</a>
+                                <a href="#"><img src="../../images/common/icon_arrow1.svg" alt="">비밀번호 찾기</a>
+                            </div>
+                        </form>
+                    </fieldset>
+                </div>
             </div>
         </div>
     </section>
@@ -139,16 +136,15 @@
 
 
     <script>
-        const input = document.querySelector('header .topset .search_box input');
-        const button = document.querySelector('header .topset .search_box button');
-
-        // 값 체크 함수
-        function checkInput() {
-            if (input.value.trim() !== "") { //trim() 문자열 앞뒤의 공백(띄어쓰기, 탭, 줄바꿈 등)을 제거하는 함수
-                button.classList.add('on');
-            } else {
-                button.classList.remove('on');
-            }
+    const input = document.querySelector('header .topset .search_box input');
+    const button = document.querySelector('header .topset .search_box button');
+        
+    // 값 체크 함수
+    function checkInput() {
+        if (input.value.trim() !== "") { //trim() 문자열 앞뒤의 공백(띄어쓰기, 탭, 줄바꿈 등)을 제거하는 함수
+            button.classList.add('on');
+        } else {
+            button.classList.remove('on');
         }
 
         input.addEventListener('focus', checkInput);
@@ -156,14 +152,57 @@
         input.addEventListener('blur', () => {
             button.classList.remove('on');
         });
-
+    }
     </script>
 
     <script>
-        let a = 10;
-let b = 20;
-let sum = a + b;  // 여기에 브레이크포인트 찍기
-console.log(sum);
+
+    //비밀번호 보이기
+    const pwInput = document.querySelector('.pw')
+    const eyes = document.querySelector('.eyes')
+    const eyesOn = document.querySelector('.eyes > .on')
+    const eyesOff = document.querySelector('.eyes > .off')
+
+
+
+
+    eyes.addEventListener('click', function(){
+        if(pwInput.type === "password"){
+            
+            pwInput.type = "text";
+
+            eyesOn.style.display = 'none'
+            eyesOff.style.display = 'block'
+        } else {
+            pwInput.type = "password";
+            eyesOn.style.display = 'block'
+            eyesOff.style.display = 'none'
+        
+        }
+    })
+
+
+    //로그인 엔터 입력 값 없을때 나오는 경고창
+    const loginButton = document.querySelector('.login-button');
+    const idInput = document.querySelector('.id');
+    const loginForm = document.querySelector('.login_form');
+
+    loginForm.addEventListener('submit',function(event){
+        event.preventDefault();
+
+        if(idInput.value.trim() === ""){
+            alert('아이디를입력 해주세요')
+            return
+        }
+        if (pwInput.value.trim() === ""){
+            alert('비밀번호를입력 해주세요')
+            return
+        }
+
+        alert(`로그인 성공\n아이디: ${idInput.value}`);
+    })
+    
+    console.log(loginForm)
 
     </script>
 </body>
